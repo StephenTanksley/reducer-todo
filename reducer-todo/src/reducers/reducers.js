@@ -34,6 +34,7 @@ export const reducer = (state, action) => {
                     return {
                         ...item,
                         completed: !item.completed
+
                     }
                 } else {
                     return item;

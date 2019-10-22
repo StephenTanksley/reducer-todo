@@ -20,3 +20,11 @@
 .App-link {
   color: #09d3ac;
 }
+
+.item {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}

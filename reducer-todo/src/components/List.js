@@ -4,10 +4,17 @@ import React from 'react'
 //code from the class components to-do assignment.
 
 const List = (props) => {
+    console.log(props)
     return (
-        <div>
+        <div
             className={`item${props.item.completed ? " completed" : ""}`}
+            onClick={() => props.dispatch({ 
+                type: "TOGGLE_COMPLETED", 
+                payload: props.item})}>
+                        
             <p>{props.item.item}</p>
         </div>
     )
 }
+
+export default List

@@ -8,7 +8,6 @@ import List from '../components/List'
 
 const Form = () => {
     const [state, dispatch] = useReducer(reducer, initialState)
-    console.log(state)
 
     const [newToDo, setNewToDo] = useState({
         item: '',
@@ -39,6 +38,8 @@ const Form = () => {
             completed: false,
             id: Date.now()
         })
+        console.log(state)
+
     }
 
     return (
@@ -53,8 +54,18 @@ const Form = () => {
 
                     <button type="submit">Add item</button>
             </form>
-            
+
         <button onClick={() => dispatch({ type: "CLEAR_COMPLETED"})}> Clear completed </button>
+        
+            <div>
+                {state.map((item) => 
+                    <List 
+                        key={item.id} 
+                        item={item} 
+                        dispatch={dispatch}
+                        />
+                )}
+            </div>
         </div>
     )
 
