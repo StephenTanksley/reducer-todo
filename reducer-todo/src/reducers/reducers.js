@@ -46,7 +46,8 @@ export const reducer = (state, action) => {
 
         case 'CLEAR_COMPLETED':
 
-        return state.filter((item) => {!item.completed})
+        return state.filter((item) => 
+            !item.completed)
 
          /*What do we need to re-render our list with only completed elements?
            A filter function will return an array that only fall within certain
