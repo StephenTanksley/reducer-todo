@@ -15,12 +15,6 @@ const Form = () => {
         id: Date.now()
     })
 
-    const initialValue = {
-        item: '',
-        completed: false,
-        id: Date.now()
-    }
-
     const handleChange = (e) => {
         setNewToDo({
             ...newToDo,
